@@ -1,13 +1,14 @@
 <html>
 
 <head>
-    <title>Book Club Society</title>
+    <title>rgubookclub</title>
 </head>
 
 <body>
     
     <header>
-        <h1>Book Club Society</h1>
+        <h1>RGU Book Club</h1>
+        <link rel='stylesheet' href = 'css/main.css'>
     </header>
 
     <nav>
@@ -16,15 +17,47 @@
             <li><a href = "event_calender.html">Events</a></li>
             <li><a href = "img_gallery.html">Gallery</a></li>
             <li><a href = "current_members.html">Current Members</a></li>
-            <li><a href = "contact_us.html">Contact us</a></li>
+            <li class="active"><a href = "contact_us.html">Contact us</a></li>
         </ul>
     </nav>
 
-    <main></main>
+    <main>
+        <div>
+            <form>
+                <fieldset>
+                    <legend>Contact us with the form below </legend>
+
+
+                    <label for="name">Name : </label>
+                    <input type="text" name="name" value=""/><br><br/>
+
+                    <label for="email">E-mail : </label>
+                    <input type="email" name="name" value=""/><br/>
+					
+					<p>Please select one of the following :</p>
+                    <input type="radio" id="member" name="membership" value="Member">
+                    <label for="member">Member</label>
+                    <input type="radio" id="non-member" name="membership" value="Non_member">
+                    <label for="Non-member">Non-Member</label><br></br>
+                    
+                    <label for="contacts">Why are you contacting us : </label></br>
+                    <textarea name="contact" cols="45" rows="5"></textarea><br></br>
+
+                    <label for="file">Upload any relevant files here : </label></br>
+					<input type="file" name="file"></input><br></br>
+					
+					<input type="submit" value="Submit"></input>
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
 
     <aside></aside>
 
-    <footer></footer>
+    <footer>
+        <p>Copyright Elyse Chapman</p>
+    </footer>
 
 </body>
 

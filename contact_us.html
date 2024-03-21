@@ -1,16 +1,29 @@
-<html>
+<!DOCTYPE html>
 
 <head>
     <title>rgubookclub</title>
+
 </head>
 
 <body>
     
-    <header>
-        <h1>RGU Book Club</h1>
+    <header> 
+        <!--Link to CSS, logo image, and header-->
         <link rel='stylesheet' href = 'css/main.css'>
+        <img id="logo" src="images/bookLogo.webp" alt="Logo">
+        <h1>RGU Book Club</h1>
+       
     </header>
+ 
+    <script>
+        // sending form code
+        function send_form(id, content){
+            var container = document.getElementById(id);
+            container.innerHTML = content;
+        }
+    </script>
 
+    <!--navigation bar-->
     <nav>
         <ul>
             <li><a href = "index.html">Home</a></li>
@@ -23,39 +36,54 @@
 
     <main>
         <div>
+            <!--Form to collect feedback from users-->
             <form>
                 <fieldset>
                     <legend>Contact us with the form below </legend>
 
+                    <!--Name input-->
+                    <label>Name : </label>
+                    <input title="Name input" type="text" name="name" value=""><br>
 
-                    <label for="name">Name : </label>
-                    <input type="text" name="name" value=""/><br><br/>
-
-                    <label for="email">E-mail : </label>
-                    <input type="email" name="name" value=""/><br/>
+                    <!--Email input-->
+                    <label>E-mail : </label>
+                    <input title="E-Mail input" type="email" name="name" value=""><br>
 					
+                    <!--Selection input member/non-member-->
 					<p>Please select one of the following :</p>
-                    <input type="radio" id="member" name="membership" value="Member">
-                    <label for="member">Member</label>
-                    <input type="radio" id="non-member" name="membership" value="Non_member">
-                    <label for="Non-member">Non-Member</label><br></br>
+                    <input title="Member option" type="radio" id="member" name="membership" value="Member">
+                    <label>Member</label>
+                    <input title="non-member option" type="radio" id="non-member" name="membership" value="Non_member">
+                    <label>Non-Member</label><br>
                     
-                    <label for="contacts">Why are you contacting us : </label></br>
-                    <textarea name="contact" cols="45" rows="5"></textarea><br></br>
+                    <!--inforamtion for why contacting-->
+                    <label>Why are you contacting us : </label><br>
+                    <textarea title="Message box" name="contact" cols="45" rows="5"></textarea><br>
 
-                    <label for="file">Upload any relevant files here : </label></br>
-					<input type="file" name="file"></input><br></br>
-					
-					<input type="submit" value="Submit"></input>
+                    <!--upload files-->
+                    <label>Upload any relevant files here : </label><br>
+					<input title="file upload" type="file" name="file">
+
+                    <!--submit button-->
+                    <button type="button" onclick = 'send_form("form_outcome", "Form has been submitted sucessfully!")' >Submit</button>
+                    
+                   
 
                 </fieldset>
             </form>
         </div>
+
+        <div>
+            <!--display completed message here-->
+            <p id = "form_outcome"></p>
+        </div>
+
     </main>
 
     <aside></aside>
 
     <footer>
+        <!--copyright information-->
         <p>Copyright Elyse Chapman</p>
     </footer>
 

@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 
 <head>
     <title>rgubookclub</title>
@@ -7,10 +7,16 @@
 <body>
     
     <header>
+		<!--Logo, header, and CSS links-->
+        <img id="logo" src="images/bookLogo.webp" alt="Logo">
         <h1>RGU Book Club</h1>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel='stylesheet' href = 'css/main.css'>
     </header>
 
+
+	<!--navigaton bar-->
     <nav>
         <ul>
             <li><a href = "index.html">Home</a></li>
@@ -22,46 +28,80 @@
     </nav>
 
     <main>
-        <div>
-            <img src="images/Bannedbooks.jpg" alt="banned books" width="200" height="200">
-        </div>
+	<!--image gallery-->
+	<div id="img-gallery" class="container">
+		<div class="row">
+			
+			<!--row 1-->
+			<div class="col-sm">
+				<img  src="images/aGoodGirlsGuideToMurder.jpg" onload="delight(this)"  onmouseover="highlight(this)" onmouseout="delight(this)"  class="gallery-img" alt="A good girls guide to murder" width="200" height="300">
+			</div>
 
-        <div>
-            <img src="images/aGoodGirlsGuideToMurder.jpg" alt="A good girls guide to murder" width="200" height="300">
-        </div>
+			<div class ="col-sm">
+				<img src="images/aBalladOfSongBirdsAndSnakes.webp" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="A ballad of songbirds and snakes" width="200" height="300">
+			</div>
+			
+			<div class = "col-sm">
+				<img src="images/theHungerGamesTrilogy.jpg" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="The hunger games Trilogy" width="350" height="250">
+			</div>
+			
+		</div>
+		<div class="row">
+		
+			<!--row 2-->
+			<div class="col-sm">
+				<img src="images/Bannedbooks.jpg" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="banned books" width="200" height="200">
+			</div>
+			
+			<div class = "col-sm">
+				<img src="images/Best-books-of-2023.webp" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="best books of 2023" width="300" height="200">
+			</div>
 
-        <div>
-            <img src="images/aBalladOfSongBirdsAndSnakes.webp" alt="A ballad of songbirds and snakes" width="200" height="300">
-        </div>
+			<div class = "col-sm">
+				<img src="images/History-of-paper-pop-up-books.jpg" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="dinosaur pop up book" width="300" height="200">
+			</div>
+			
+		</div>
+		<div class="row">
 
-        <div>
-            <img src="images/Best-books-of-2023.webp" alt="best books of 2023" width="300" height="200">
-        </div>
+			<!--row 3-->
+			<div class = "col-sm">
+				<img src="images/popularBooks2023.jfif" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="popular books of 2023" width="300" height="200">
+			</div>
 
-        <div>
-            <img src="images/theHungerGamesTrilogy.jpg" alt="The hunger games Trilogy" width="350" height="250">
-        </div>
+			<div class = "col-sm">
+				<img src="images/top10-fiction.jpg" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="top ten fiction of 2023" width="300" height="200">
+			</div>
 
-        <div>
-            <img src="images/History-of-paper-pop-up-books.jpg" alt="dinosaur pop up book" width="300" height="200">
-        </div>
+			<div class = "col-sm">
+				<img src="images/top10-nonfiction.jpg" onload="delight(this)" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt="top ten nonfiction of 2023" width="300" height="200">
+			</div>
+		</div>
+	</div>
 
-        <div>
-            <img src="images/popularBooks2023.jfif" alt="popular books of 2023" width="300" height="200">
-        </div>
+	<script>
+		//document.getElementById("img-gallery1").addEventListener("mouseover", highlight);
+		//document.getElementById("img-gallery1").addEventListener("mouseout",delight);
 
-        <div>
-            <img src="images/top10-fiction.jpg" alt="top ten fiction of 2023" width="300" height="200">
-        </div>
+		// code to allow images to be blured and deblurred when the mouse is hovering above
+		function highlight(x){
+			x.style="border: solid #b84848 2px;"
+			x.style="filter: none;"
+		}
 
-        <div>
-            <img src="images/top10-nonfiction.jpg" alt="top ten nonfiction of 2023" width="300" height="200">
-        </div>
+		function delight(x){
+			x.style="border: none;"	
+			x.style="filter: blur(2px);"
+		}
+
+	</script>
+
     </main>
 
     <aside></aside>
 
     <footer>
+		<!--copyright information-->
         <p>Copyright Elyse Chapman</p>
     </footer>
 

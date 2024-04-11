@@ -17,7 +17,16 @@
         <h1>RGU Book Club</h1>
 
             <!--Login area-->
-            <form id = "login">
+			<!--
+				Threat model
+				Threat Source: External
+				Threat Agent : Human
+				Threat Intention : Intentional
+				Threat Motivation : Seeing who is in society
+				Threat Impact : gaining personal information on society members
+				Threat Mitigation : Stronger defences, only allowing captains to be able to access all the login information
+			-->
+            <form name="loginF" id ="login">
                 <fieldset>
                     <input type="email" name="email" placeholder = "email"/>
                     <input type="password" name="password" placeholder = "password"/>
@@ -30,15 +39,27 @@
     <script>
         //Login messages
         var counter = 2;
+		var email = document.forms["loginF"]["email"].value;
+		var password = document.forms["loginF"]["password"].value;
 
         function login(){
-            if (counter % 2 == 0){
-                alert('You have logged in!');
-            }
-            else{
-                alert('You have been logged out!');
-            }
-            counter = counter + 1;
+			if(email == ""){
+				alert("Please enter an email");
+				}
+				else{
+					if(password == ""){
+						alert("Please enter a password");
+					}
+					else{
+						if (counter % 2 == 0){
+							alert("You have logged in!");
+						}
+						else{
+							alert("You have been logged out!");
+						}
+                        counter += 1;
+                    }
+                }
         }
     </script>
 
@@ -46,7 +67,9 @@
     <nav>
         <ul>
             <li class="active"><a href = "index.html">Home</a></li>
+			<li><a href = "bookInfo.html">Current Books</a></li>
             <li><a href = "event_calender.html">Events</a></li>
+			<li><a href = "shop.html">New Books</a></li>
             <li><a href = "img_gallery.html">Gallery</a></li>
             <li><a href = "current_members.html">Current Members</a></li>
             <li><a href = "contact_us.html">Contact us</a></li>
@@ -100,28 +123,37 @@
 
         <!--Left coloum information about the web page-->
         <div id="left-col">
-            <h3>Welcome!</h3>
+            <div style="margin: 20px">
+               <h3>Welcome!</h3>
             <p>Welcome to the RGU Book Club Society website!</p>
 			<p>No matter what you enjoy reading you can come join our meet-ups 
 				and make some new bookish friends. We meet at least once per week
 				to discover and discuss new books, as well as just some quiet reading
 				time!</p>
 			<p>We also sprinkle in some other events, such as film and quiz nights
-				to change things up!</P>
+				to change things up!</P> 
+            </div>
+            
         </div>
     </main>
 
     <aside>
         <!--Right coloum link to goodreads twitter account-->
         <div id="right-col">
-            <h3>Latest Tweets</h3>
-            <a class="twitter-timeline" data-height="500" href="https://twitter.com/goodreads?ref_src=twsrc%5Etfw">Tweets by goodreads</a> <script async src="https://platform.twitter.com/widgets.js"></script>
+            <img id="headlineImage" src="images/RippedBook.jpg" alt="Article image - ripped up book">
+            <div style="margin: 20px;">
+               <h3><b>WHODUNNIT?</b></h3>
+                <p>A famous murder mystery has been found dead in its home in Aberdeen.</p>
+                <p>There is an investigation on going to find the culprit and the police has taken some suspects in for questioning.</p>
+                <p>There has been no statements released from the police at this time.</p>
+            </div>
+            
         </div>
     </aside>
 
     <!--Copyright information-->
     <footer>
-        <p>Copyright Elyse Chapman</p>
+        <p>Copyright Elyse Chapman - 2024</p>
     </footer>
 
 </body>

@@ -14,16 +14,24 @@ header{
     background-color : #FFFFFF;
     border-top-left-radius : 10px;
     border-top-right-radius : 10px;
-    margin : 5px;
+    padding: 10px;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+#logo{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right:10px;
+}
+
+h1, h2, h3, h4, h5, h6, p, legend, form, label{
     font-family :'Courier New', Courier, monospace;
     color : #000000;
 }
 
 h1{
     font-size : 36px;
+    display: inline;
 }
 h3{
     font-size : 25px;
@@ -33,9 +41,8 @@ p{
 }
 
 main{
-    background-color : #FFFFFF;
     border-radius : 10px;
-    margin : 5px;
+    padding : 5px;
 }
 
 aside{
@@ -44,14 +51,25 @@ aside{
 }
 
 footer{
+    clear: both;
     background-color : #d47d7d;
     border-radius : 10px;
+    margin: 10px;
 }
 
+nav ul{
+    margin : 0px;
+    padding : 0px;
+    overflow : hidden;
+    background-color : #d47d7d;
+}
 nav li{
     border : 2px, solid, #b84848;
-    background-color : #d47d7d;
+	border-radius: 15px;
     list-style-type: none;
+    float : left;
+    width : 13%;
+    padding : 16px;
 }
 nav li a{
     color : #FFFFFF;
@@ -66,19 +84,116 @@ nav li:hover{
 }
 
 table{
-    font-family :'Courier New', Courier, monospace;
+    margin-left: 100px;
     border-collapse: collapse;
 }
 table td, table th{
-    border : 2px, solid, #F0F0F0;
+    border : 2px solid #F0F0F0;
+    text-align: center;
+    width: 200px;
+    padding: 5px
 }
 table tr:nth-child(even){
     background-color : #F2F2F2;
 }
 table tr:hover{
-    background-color : #8bd5d6;
+    background-color : #d47d7d;
 }
 Table th{
     background-color : #d47d7d;
     color : #FFFFFF;
+}
+
+#right-col{
+    margin-top : 5px;
+    margin-bottom : 5px;
+    padding : 5px; 
+    float : right;
+    background-color : #FFFFFF;
+    width: 49%;
+    border-radius: 15px;
+}
+#right-col:hover{
+    border-style: solid;
+    border-width: 10px;
+    border-color : #d47d7d;
+}
+#left-col{
+    margin-top : 5px;
+    margin-bottom : 5px;
+    padding : 5px; 
+    float : left;
+    background-color : #FFFFFF;
+    width: 49%;
+    border-radius: 15px;
+}
+#left-col:hover{
+    border-style: solid;
+    border-width: 10px;
+    border-color : #d47d7d;
+}
+#main{
+	background-color: #FFFFFF;
+	width: 75%;
+	border-radius: 15px;
+	padding: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 13%;
+	text-align: center;
+}
+
+.carousel-item{
+    height: 400px ;
+    width:  800px ;
+    margin-left: 28% ;   
+}
+
+.gallery-img{
+	width: 100%;
+}
+
+#img-gallery{
+	padding-top: 10px;
+}
+
+#img-gallery, .row{
+	margin-bottom: 10px;
+}
+
+#login{
+    float: right;
+}
+
+#displayImages{
+	display: inline;
+	width: 300px;
+	height: 400px;
+	margin-left: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 50px;
+}
+
+#headlineImage{
+    float: left;
+    height: 250px;
+    width: 250px;
+    padding: 30px;
+}
+
+#text{
+    background-color: #FFFFFF;
+}
+#eventsForm{
+    margin-left: 675px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    width: 500px;
+	border-radius: 15px;
+
+}
+.instagram-media{
+	display: inline;
+	width: 20px;
 }
